@@ -15,7 +15,7 @@ export default function ContactPage() {
             I would love to hear from you! Whether you have a question, want to
             collaborate, or you want to hire me for a project, feel free to
             reach out using the form below. I&apos;ll get back to you as soon as
-            possible.
+            possible!.
           </p>
         </section>
         <ContactForm />
