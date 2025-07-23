@@ -12,7 +12,7 @@ export default function ProjectCard() {
           <h2 className="mb-5 text-xl font-semibold text-center text-orange-500 ">
             {project.title}
           </h2>
-          <div className="flex flex-col items-center justify-center mx-auto space-y-10 md:space-x-5 md:flex-row ">
+          <div className="flex flex-col items-center justify-center mx-auto space-y-10 md:space-x-10 md:flex-row ">
             <Image
               src={project.image}
               alt={project.title}
