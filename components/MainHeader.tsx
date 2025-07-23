@@ -13,7 +13,7 @@ export default function MainHeader() {
       {/* Logo */}
       <div className="absolute top-0 left-0">
         <Image
-          src="/icon.png"
+          src="/logo.png"
           alt="Logo"
           width={120}
           height={100}

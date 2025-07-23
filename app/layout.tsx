@@ -43,14 +43,6 @@ export const metadata: Metadata = {
     description: "A personal portfolio showcasing my work and skills.",
     url: "https://frontend-developer-portfolio-five.vercel.app/",
     siteName: "Alejandro Medina Portfolio",
-    images: [
-      {
-        url: "https://frontend-developer-portfolio-five.vercel.app/og-logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Alejandro Medina Portfolio",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
