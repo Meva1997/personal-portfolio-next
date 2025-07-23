@@ -6,7 +6,7 @@ import TechStack from "./TechStack";
 export default function AboutMeCard() {
   return (
     <>
-      <section className="flex flex-col items-center max-w-4xl px-5 mx-auto my-10 space-y-6 rounded-lg shadow-md text-balance md:flex-row md:space-y-0 md:space-x-6">
+      <section className="flex flex-col items-center max-w-4xl px-5 mx-auto mt-20 mb-10 space-y-6 rounded-lg shadow-md text-balance md:flex-row md:space-y-0 md:space-x-6">
         <div className="p-5 text-gray-300 bg-gray-900 rounded-lg">
           <p className="text-lg font-semibold text-center md:text-center">
             Hello! My name is{" "}
@@ -19,7 +19,7 @@ export default function AboutMeCard() {
               Frontend development
             </span>
             , focusing on building interactive, efficient, and user-friendly
-            applications. Let’s build something amazing together!
+            applications. Let&apos;s build something amazing together!
           </p>
         </div>
         <Image
