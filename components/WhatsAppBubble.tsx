@@ -11,14 +11,14 @@ export default function WhatsAppBubble() {
 
   return (
     <div
-      className="fixed z-50 bottom-6 right-18"
+      className="fixed z-50 bottom-6 right-6"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
       style={{ width: "4rem", height: "4rem", position: "fixed" }}
     >
       {/* Tooltip en posición absoluta, NO desplaza el icono */}
       {show && (
-        <span className="absolute px-3 py-1 text-xs text-white -translate-x-1/2 bg-green-600 rounded shadow-lg pointer-events-none bottom-20 left-1/2 whitespace-nowrap">
+        <span className="absolute px-3 py-1 text-xs text-white -translate-x-1/2 bg-green-600 rounded shadow-lg pointer-events-none rigth-20 bottom-20 whitespace-nowrap">
           Click to chat on WhatsApp
         </span>
       )}

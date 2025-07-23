@@ -46,7 +46,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder="Your message..."
+          placeholder="Your message... Hey there! I would love to collaborate with you on a project."
           required
           rows={5}
           className="w-full px-3 py-2 border rounded shadow appearance-none text-whiteresize-none focus:outline-none focus:ring-2 focus:ring-blue-500"

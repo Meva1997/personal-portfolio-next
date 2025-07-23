@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <>
       <MainHeader />
-      <main className="flex flex-col items-center justify-center min-h-dvh">
+      <main className="flex flex-col items-center justify-center px-5 min-h-dvh">
         <section className="max-w-4xl px-5 mx-auto mb-8 text-center">
           <h1 className="text-3xl font-bold text-center text-orange-500">
             Send Me a Message to Get in Touch
