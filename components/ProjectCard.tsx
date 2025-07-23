@@ -20,7 +20,7 @@ export default function ProjectCard() {
               width={280}
               height={100}
             />
-            <p className="text-lg font-bold text-justify text-white md:pl-2 ">
+            <p className="text-lg font-bold text-justify text-gray-300 md:pl-2 ">
               {project.description}
             </p>
           </div>

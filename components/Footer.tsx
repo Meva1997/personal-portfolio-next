@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
@@ -10,12 +11,12 @@ export default function Footer() {
           </h3>
           <p className="text-center text-gray-400">
             Feel free to reach out via{" "}
-            <a
-              href="mailto:alexmedval2@gmail.com"
+            <Link
+              href="/contact"
               className="font-semibold text-orange-500 hover:underline"
             >
               email
-            </a>{" "}
+            </Link>{" "}
             or connect with me on:{" "}
           </p>
           <div className="flex justify-center py-2 space-x-4 text-4xl text-orange-500">

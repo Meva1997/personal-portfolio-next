@@ -11,7 +11,7 @@ import { SiTypescript } from "react-icons/si";
 
 export default function TechStack() {
   return (
-    <article className="px-6 my-6">
+    <article className="px-6 my-10">
       <ul className="grid items-center justify-center max-w-3xl grid-cols-2 gap-6 mx-auto md:grid-cols-3 lg:flex lg:items-center lg:justify-center lg:gap-8">
         <li>
           <RiNextjsFill className="text-6xl text-gray-500 md:text-8xl" />
