@@ -15,10 +15,53 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Personal Portfolio",
-  keywords: ["Portfolio", "Web Development", "Next.js"],
-  authors: [{ name: "Alejandro Medina", url: "" }],
+  keywords: [
+    "Portfolio",
+    "Web Development",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "JavaScript",
+    "TypeScript",
+    "Frontend Developer",
+    "Freelance",
+    "Alejandro Medina",
+    "Web Design",
+    "Jalisco",
+    "Mexico",
+  ],
+  authors: [
+    {
+      name: "Alejandro Medina",
+      url: "https://frontend-developer-portfolio-five.vercel.app/",
+    },
+  ],
   creator: "Alejandro Medina",
   description: "A personal portfolio showcasing my work and skills.",
+  openGraph: {
+    title: "Alejandro Medina - Personal Portfolio",
+    description: "A personal portfolio showcasing my work and skills.",
+    url: "https://frontend-developer-portfolio-five.vercel.app/",
+    siteName: "Alejandro Medina Portfolio",
+    images: [
+      {
+        url: "https://frontend-developer-portfolio-five.vercel.app/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Alejandro Medina Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +74,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main>{children}</main>
         <WhatsAppBubble />
       </body>
     </html>

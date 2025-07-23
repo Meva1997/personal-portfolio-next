@@ -28,7 +28,7 @@ export default function AboutMeCard() {
           width={250}
           height={250}
           priority
-          className="object-cover mt-10 rounded-full shadow-lg md:mt-0"
+          className="object-cover w-auto h-auto mt-10 rounded-full shadow-lg md:mt-0"
         />
       </section>
       <section className="mt-20">

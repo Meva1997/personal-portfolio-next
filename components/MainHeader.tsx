@@ -13,11 +13,11 @@ export default function MainHeader() {
       {/* Logo */}
       <div className="absolute top-0 left-0">
         <Image
-          src="/alex-logo.png"
+          src="/icon.png"
           alt="Logo"
           width={120}
           height={100}
-          className="block"
+          style={{ width: "auto", height: "auto" }}
           priority
         />
       </div>

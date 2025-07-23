@@ -1,0 +1,7 @@
+{
+  "name": "Personal Portfolio",
+  "short_name": "Portfolio",
+  "description": "Alejandro Medina's personal portfolio showcasing web design and development skills.",
+  "start_url": "/",
+  "display": "standalone"
+}
