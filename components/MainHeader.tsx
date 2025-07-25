@@ -4,22 +4,25 @@ import NavBar from "./NavBar";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import Link from "next/link";
 
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative flex items-center justify-end px-4 bg-gray-900 h-30 md:justify-center">
+    <header className="relative flex items-center justify-end px-4 bg-gray-900 h-32 md:justify-center">
       {/* Logo */}
       <div className="absolute top-0 left-0">
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={120}
-          height={100}
-          style={{ width: "auto", height: "auto" }}
-          priority
-        />
+        <Link href={"/"}>
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={120}
+            height={100}
+            style={{ width: "auto", height: "auto" }}
+            priority
+          />
+        </Link>
       </div>
 
       {/* Hamburger button (mobile) */}

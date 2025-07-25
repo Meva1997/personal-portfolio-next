@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Alejandro Medina",
-      url: "https://frontend-developer-portfolio-five.vercel.app/",
+      url: "https://mevadev.com",
     },
   ],
   creator: "Alejandro Medina",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alejandro Medina - Personal Portfolio",
     description: "A personal portfolio showcasing my work and skills.",
-    url: "https://frontend-developer-portfolio-five.vercel.app/",
+    url: "https://mevadev.com",
     siteName: "Alejandro Medina Portfolio",
     locale: "en_US",
     type: "website",
