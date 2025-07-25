@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.mevadev.com/:path*",
+      "destination": "https://mevadev.com/:path*",
+      "permanent": true
+    }
+  ]
+}
