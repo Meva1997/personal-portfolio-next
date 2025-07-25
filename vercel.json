@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "https://www.mevadev.com/:path*",
+      "source": "/:path*",
       "destination": "https://mevadev.com/:path*",
       "permanent": true
     }
