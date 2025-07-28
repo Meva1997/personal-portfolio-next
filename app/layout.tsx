@@ -14,21 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio",
+  title: "Alejandro Medina | Frontend Developer & Web Designer",
+  description:
+    "I'm Alejandro Medina, a Frontend Developer based in Mexico. Check out my work with Next.js, React, and modern web technologies. Let's connect!",
   keywords: [
+    "Alejandro Medina",
+    "Frontend Developer",
+    "Web Designer",
     "Portfolio",
-    "Web Development",
     "Next.js",
     "React",
     "Tailwind CSS",
+    "Mexico",
+    "Jalisco",
+    "Freelance",
     "JavaScript",
     "TypeScript",
-    "Frontend Developer",
-    "Freelance",
-    "Alejandro Medina",
-    "Web Design",
-    "Jalisco",
-    "Mexico",
   ],
   authors: [
     {
@@ -37,7 +38,6 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Alejandro Medina",
-  description: "A personal portfolio showcasing my work and skills.",
   openGraph: {
     title: "Alejandro Medina - Personal Portfolio",
     description: "A personal portfolio showcasing my work and skills.",
