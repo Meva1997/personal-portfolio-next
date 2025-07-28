@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.mevadev.com" }],
+        destination: "https://mevadev.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
+  // Puedes agregar otras opciones aquí si lo deseas
 };
 
-export default nextConfig;
+module.exports = nextConfig;
