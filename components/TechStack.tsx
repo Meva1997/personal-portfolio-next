@@ -6,6 +6,7 @@ import {
   RiJavascriptFill,
   RiHtml5Fill,
   RiCss3Fill,
+  RiNodejsFill,
 } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 
@@ -33,6 +34,9 @@ export default function TechStack() {
         </li>
         <li>
           <RiCss3Fill className="text-6xl text-blue-600 md:text-8xl" />
+        </li>
+        <li>
+          <RiNodejsFill className="text-6xl text-green-600 md:text-8xl" />
         </li>
       </ul>
     </article>
