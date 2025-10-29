@@ -10,7 +10,7 @@ export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative flex items-center justify-end px-4 bg-gray-900 h-32 md:justify-center">
+    <header className="relative flex items-center justify-end px-4 h-32 md:justify-center bg-gray-900">
       {/* Logo */}
       <div className="absolute top-0 left-0">
         <Link href={"/"}>

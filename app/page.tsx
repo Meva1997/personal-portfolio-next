@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="px-5 text-4xl font-bold text-center text-orange-500">
           Welcome to My Portfolio
         </h1>
-        <p className="mt-4 text-lg font-semibold">Frontend Developer</p>
+        <p className="mt-4 text-lg font-semibold">Fullstack Developer</p>
         <AboutMeCard />
       </main>
 

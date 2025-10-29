@@ -8,12 +8,12 @@ import {
   RiCss3Fill,
   RiNodejsFill,
 } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { SiTypescript, SiExpress } from "react-icons/si";
 
 export default function TechStack() {
   return (
     <article className="px-6 my-10">
-      <ul className="grid items-center justify-center max-w-3xl grid-cols-2 gap-6 mx-auto md:grid-cols-3 lg:flex lg:items-center lg:justify-center lg:gap-8">
+      <ul className="grid items-center justify-center max-w-3xl grid-cols-2 gap-6 mx-auto lg:grid-cols-3 xl:flex xl:items-center xl:justify-center xl:gap-8">
         <li>
           <RiNextjsFill className="text-6xl text-gray-500 md:text-8xl" />
         </li>
@@ -37,6 +37,9 @@ export default function TechStack() {
         </li>
         <li>
           <RiNodejsFill className="text-6xl text-green-600 md:text-8xl" />
+        </li>
+        <li>
+          <SiExpress className="text-6xl text-gray-300 md:text-8xl" />
         </li>
       </ul>
     </article>

@@ -18,7 +18,7 @@ export default function AboutMeCard() {
             and I&apos;m a passionate developer eager to solve real-world
             problems through technology. I specialize in{" "}
             <span className="text-lg font-bold text-orange-500">
-              Frontend development
+              Fullstack development
             </span>
             , focusing on building interactive, efficient, and user-friendly
             applications. Let&apos;s build something amazing together!
