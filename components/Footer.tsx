@@ -21,7 +21,7 @@ export default function Footer() {
           </p>
           <div className="flex justify-center py-2 space-x-4 text-4xl text-orange-500">
             <a
-              href="https://www.linkedin.com/in/alejandro-medina-web-developer/"
+              href="https://www.linkedin.com/in/alex-fullstack-developer/"
               rel="noopener noreferrer"
               target="_blank"
               className="transition-transform hover:scale-105"
