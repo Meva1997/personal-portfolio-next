@@ -33,6 +33,15 @@ export default function AboutMeCard() {
           className="object-cover w-auto h-auto mt-10 rounded-full shadow-lg md:mt-0"
         />
       </section>
+      <section>
+        <a
+          href="/Full-Stack-Developer.pdf"
+          download
+          className="inline-block px-6 py-3 mt-4 font-semibold text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 transition-colors duration-300 text-center"
+        >
+          Download My Resume
+        </a>
+      </section>
       <section className="mt-20">
         <h2 className="text-2xl font-bold text-center text-orange-500">
           My Tech Stack

@@ -14,6 +14,10 @@ export default function ProjectsPage() {
           Explore a collection of my recent projects, showcasing my expertise in
           modern web development, responsive design, and innovative solutions.
         </p>
+        <p className="max-w-2xl text-center text-green-500 animate-pulse">
+          Note: Some projects may not work or have extended loading times due to
+          being hosted on free-tier services.
+        </p>
         <Suspense fallback={<ProjectCardSkeleton />}>
           <ProjectCard />
         </Suspense>
