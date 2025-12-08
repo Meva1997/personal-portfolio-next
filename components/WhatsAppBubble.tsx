@@ -4,9 +4,9 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppBubble() {
   const [show, setShow] = useState(false);
-  const phone = "524611046818"; // Reemplaza con tu número en formato internacional
+  const phone = "19565027164"; // Reemplaza con tu número en formato internacional
   const message = encodeURIComponent(
-    "Hi, I would like more information on your services as a frontend developer"
+    "Hi, tell me more about your experience as a fullstack developer!"
   ); // Predefined message
 
   return (
