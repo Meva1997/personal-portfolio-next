@@ -8,7 +8,7 @@ import {
   RiCss3Fill,
   RiNodejsFill,
 } from "react-icons/ri";
-import { SiTypescript, SiExpress } from "react-icons/si";
+import { SiTypescript, SiExpress, SiPython } from "react-icons/si";
 
 export default function TechStack() {
   return (
@@ -24,7 +24,7 @@ export default function TechStack() {
           <SiTypescript className="text-6xl text-blue-600 md:text-8xl" />
         </li>
         <li>
-          <RiJavascriptFill className="text-yellow-300 text-7xl md:text-9xl" />
+          <SiPython className="text-yellow-300 text-7xl md:text-8xl" />
         </li>
         <li>
           <RiTailwindCssLine className="text-6xl text-sky-500 md:text-8xl" />

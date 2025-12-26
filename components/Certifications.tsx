@@ -9,6 +9,25 @@ export default function Certifications() {
       </h3>
       <article className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
         <Link
+          href="https://www.udemy.com/certificate/UC-bc9f4a22-6eaa-4511-a585-bded18665d76/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative hover:scale-105 transition-transform duration-300 overflow-hidden"
+        >
+          <Image
+            src="/udemy-python-alex.jpg"
+            alt="Python Certification on Udemy"
+            width={300}
+            height={200}
+            className="w-auto h-auto rounded-lg group-hover:blur-xs transition-all duration-300"
+          />
+          <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="bg-gray-900 bg-opacity-80 font-semibold text-orange-500 px-4 py-2 rounded">
+              View Certification
+            </div>
+          </span>
+        </Link>
+        <Link
           href="https://www.udemy.com/certificate/UC-22ecbe6d-aee4-4117-98b3-fd92fb9d49e6/"
           target="_blank"
           rel="noopener noreferrer"
