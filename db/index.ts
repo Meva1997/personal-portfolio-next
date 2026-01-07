@@ -2,6 +2,15 @@ import { ProjectsDB } from "@/types";
 
 export const db: ProjectsDB[] = [
   {
+    id: 0,
+    title: "PawScout - Pet Adoption Platform",
+    description:
+      "PawScout is a fullstack pet adoption platform. The frontend is developed using Next.js, TypeScript, and Tailwind CSS, and deployed on Vercel. Data is fetched from a custom REST API using TanStack Query for efficient management. The backend is built with Python, FastApi, and PostgreSQL, and deployed on Render. Still a work in progress.",
+    demoLink: "https://paw-scout.vercel.app/",
+    codeLink: "https://github.com/Meva1997/PawScout",
+    image: "/pawscout-image.png",
+  },
+  {
     id: 1,
     title: "Cookmate - Recipe Sharing Platform",
     description:
