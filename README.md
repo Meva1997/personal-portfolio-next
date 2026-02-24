@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./public/alex-toon-chatgpt.png" alt="Alejandro Medina - Developer" width="300" />
+
 # 👨‍💻 Alejandro Medina | Full Stack Developer
 
 ### Transforming ideas into production-ready web applications
