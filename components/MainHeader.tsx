@@ -10,16 +10,16 @@ export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative flex items-center justify-end px-4 h-32 md:justify-center bg-gray-900">
+    <header className="sticky top-0 z-50 flex items-center justify-end px-4 border-b border-gray-800 h-28 md:justify-center glass-effect">
       {/* Logo */}
-      <div className="absolute top-0 left-0">
+      <div className="absolute top-0 left-0 transition-transform duration-300 hover:scale-105">
         <Link href={"/"}>
           <Image
             src="/logo.png"
             alt="Logo"
-            width={120}
+            width={100}
             height={100}
-            style={{ width: "auto", height: "auto" }}
+            className="h-26 w-26"
             priority
           />
         </Link>
@@ -28,7 +28,7 @@ export default function MainHeader() {
       {/* Hamburger button (mobile) */}
       {!isMenuOpen && (
         <button
-          className="z-50 text-orange-500 cursor-pointer md:hidden hover:scale-105"
+          className="z-50 transition-all duration-300 cursor-pointer md:hidden text-orange-400 hover:text-orange-300 hover:scale-110"
           aria-label="Abrir menú"
           onClick={() => setIsMenuOpen(true)}
         >
@@ -37,7 +37,7 @@ export default function MainHeader() {
       )}
 
       {/* Nav links (desktop) */}
-      <nav className="items-center justify-center hidden space-x-6 md:flex">
+      <nav className="items-center justify-center hidden space-x-8 md:flex">
         <NavBar href="/" text="Home" />
         <NavBar href="/projects" text="Projects" />
         <NavBar href="/contact" text="Contact" />
@@ -48,15 +48,15 @@ export default function MainHeader() {
         <>
           {/* Overlay */}
           <div
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
 
           {/* Mobile nav */}
-          <nav className="absolute right-0 z-50 flex flex-col w-1/3 h-auto max-w-xs p-6 space-y-6 bg-gray-900 shadow-lg top-5 md:hidden">
+          <nav className="absolute right-4 z-50 flex flex-col w-64 p-6 space-y-6 border border-gray-800 glass-effect rounded-2xl top-5 md:hidden animate-slideInRight">
             {/* Close Button */}
             <button
-              className="self-end mb-8 text-orange-500"
+              className="self-end mb-4 transition-all duration-300 text-orange-400 hover:text-orange-300 hover:rotate-90"
               aria-label="Cerrar menú"
               onClick={() => setIsMenuOpen(false)}
             >
