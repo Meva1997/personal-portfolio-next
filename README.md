@@ -216,10 +216,9 @@ I'm actively seeking opportunities to contribute to innovative projects and grow
 
 <div align="center">
 
-📧 **Email:** [your.email@example.com](mailto:mevadev97@gmail.com)  
+📧 **Email:** [mevadev97@gmail.com](mailto:mevadev97@gmail.com)  
 🌐 **Portfolio:** [frontend-developer-next.vercel.app](https://frontend-developer-next.vercel.app/)  
-💼 **LinkedIn:** [linkedin.com/in/alejandro-medina-dev](https://www.linkedin.com/in/alex-fullstack-developer/)  
-📱 **WhatsApp:** Available on website
+💼 **LinkedIn:** [https://www.linkedin.com/in/alex-fullstack-developer/](https://www.linkedin.com/in/alex-fullstack-developer/)
 
 </div>
 
