@@ -9,7 +9,7 @@ export default function AboutMeCard() {
   return (
     <div className="w-full max-w-6xl px-5 mx-auto">
       {/* About Me Section */}
-      <section className="flex flex-col items-center max-w-5xl px-6 py-8 mx-auto my-16 border border-gray-800 gap-8 glass-effect rounded-2xl md:flex-row md:gap-12 animate-fadeInUp">
+      {/* <section className="flex flex-col items-center max-w-5xl px-6 py-8 mx-auto my-16 border border-gray-800 gap-8 glass-effect rounded-2xl md:flex-row md:gap-12 animate-fadeInUp">
         <div className="flex-1 text-gray-300">
           <h2 className="mb-4 text-2xl font-bold gradient-text">About Me</h2>
           <p className="text-lg leading-relaxed">
@@ -38,7 +38,7 @@ export default function AboutMeCard() {
             className="relative object-cover transition-all duration-300 border-4 border-gray-800 rounded-full shadow-2xl w-60 h-60 group-hover:scale-105"
           />
         </div>
-      </section>
+      </section> */}
 
       {/* Tech Stack Section */}
       <section className="my-16 py-20 animate-fadeInUp">
