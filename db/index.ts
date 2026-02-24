@@ -5,7 +5,7 @@ export const db: ProjectsDB[] = [
     id: 0,
     title: "PawScout - Pet Adoption Platform",
     description:
-      "PawScout is a fullstack pet adoption platform. The frontend is developed using Next.js, TypeScript, and Tailwind CSS, and deployed on Vercel. Data is fetched from a custom REST API using TanStack Query for efficient management. The backend is built with Python, FastApi, and PostgreSQL, and deployed on Render. Still a work in progress.",
+      "PawScout is a production-grade, bilingual (EN/ES) full-stack animal adoption platform. The frontend is built with Next.js 16 (App Router) and React 19 using TypeScript, Tailwind CSS, and modern patterns like Server Components, Server Actions, and route groups, and it’s deployed on Vercel. The app integrates with a real FastAPI REST backend using JWT authentication (secure httpOnly cookies) and uses TanStack Query for efficient server-state management, caching, and optimistic updates. The backend runs on FastAPI + PostgreSQL and is deployed on Render, with Cloudinary handling optimized media delivery. The project is actively evolving with planned additions like automated testing and further performance/accessibility improvements.",
     demoLink: "https://paw-scout.vercel.app/",
     codeLink: "https://github.com/Meva1997/PawScout",
     image: "/PawScout-image.png",

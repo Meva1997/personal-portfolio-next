@@ -35,7 +35,7 @@ export default function AboutMeCard() {
       </section>
       <section>
         <a
-          href="/Full-Stack-Developer.pdf"
+          href="/Alejandro_Medina_Full_Stack_Developer.pdf"
           download
           className="inline-block px-6 py-3 mt-4 font-semibold text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 transition-colors duration-300 text-center"
         >
