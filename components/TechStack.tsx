@@ -7,43 +7,78 @@ import {
   RiCss3Fill,
   RiNodejsFill,
 } from "react-icons/ri";
-import { SiTypescript, SiExpress, SiPython, SiFastapi } from "react-icons/si";
+import {
+  SiTypescript,
+  SiExpress,
+  SiPython,
+  SiFastapi,
+  SiPostgresql,
+  SiMongodb,
+} from "react-icons/si";
 
 const techStack = [
-  { Icon: RiNextjsFill, color: "text-gray-500", name: "Next.js" },
-  { Icon: RiReactjsFill, color: "text-sky-400", name: "React" },
-  { Icon: SiTypescript, color: "text-blue-600", name: "TypeScript" },
-  { Icon: SiPython, color: "text-yellow-300", name: "Python" },
-  { Icon: RiTailwindCssLine, color: "text-sky-500", name: "Tailwind" },
-  { Icon: RiHtml5Fill, color: "text-orange-600", name: "HTML5" },
-  { Icon: RiCss3Fill, color: "text-blue-600", name: "CSS3" },
-  { Icon: RiNodejsFill, color: "text-green-600", name: "Node.js" },
-  { Icon: SiExpress, color: "text-gray-300", name: "Express" },
-  { Icon: SiFastapi, color: "text-emerald-300", name: "FastAPI" },
+  { Icon: RiNextjsFill, color: "#E8EDF2", name: "Next.js" },
+  { Icon: RiReactjsFill, color: "#61DAFB", name: "React" },
+  { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" },
+  { Icon: SiPython, color: "#F7D04E", name: "Python" },
+  { Icon: SiFastapi, color: "#2FCCAA", name: "FastAPI" },
+  { Icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL" },
+  { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },
+  { Icon: RiTailwindCssLine, color: "#38BDF8", name: "Tailwind" },
+  { Icon: RiNodejsFill, color: "#68A063", name: "Node.js" },
+  { Icon: SiExpress, color: "#8A97A6", name: "Express" },
+  { Icon: RiHtml5Fill, color: "#E34F26", name: "HTML5" },
+  { Icon: RiCss3Fill, color: "#1572B6", name: "CSS3" },
 ];
 
 export default function TechStack() {
   return (
-    <article className="px-6 my-10">
-      <ul className="grid items-center justify-center max-w-5xl grid-cols-2 gap-8 mx-auto lg:grid-cols-5">
-        {techStack.map((tech, index) => (
-          <li
-            key={tech.name}
-            className="flex flex-col items-center justify-center p-6 transition-all duration-300 border border-gray-800 group glass-effect rounded-xl hover:scale-110 hover:border-orange-500"
+    <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 max-w-6xl mx-auto">
+      {techStack.map((tech, index) => (
+        <li
+          key={tech.name}
+          className="flex flex-col items-center justify-center p-4 rounded-lg transition-all duration-200 cursor-default group"
+          style={{
+            background: "var(--bg-surface)",
+            border: "0.5px solid var(--border)",
+            borderRadius: "var(--radius-lg)",
+            animation: `fadeInUp 0.5s ease-out ${index * 0.05}s forwards`,
+            opacity: 0,
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.borderColor =
+              "var(--accent-border)";
+            (e.currentTarget as HTMLElement).style.background =
+              "var(--bg-surface-2)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.borderColor =
+              "var(--border)";
+            (e.currentTarget as HTMLElement).style.background =
+              "var(--bg-surface)";
+          }}
+        >
+          <tech.Icon
             style={{
-              animation: `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`,
-              opacity: 0,
+              fontSize: "32px",
+              color: tech.color,
+              marginBottom: "8px",
+              transition: "transform 0.2s",
+            }}
+          />
+          <span
+            style={{
+              fontSize: "10px",
+              fontWeight: 500,
+              color: "var(--text-muted)",
+              letterSpacing: "0.3px",
+              textAlign: "center",
             }}
           >
-            <tech.Icon
-              className={`text-7xl md:text-8xl ${tech.color} transition-transform duration-300 group-hover:scale-125`}
-            />
-            <span className="mt-3 text-sm font-semibold text-gray-400 transition-colors duration-300 group-hover:text-orange-400">
-              {tech.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </article>
+            {tech.name}
+          </span>
+        </li>
+      ))}
+    </ul>
   );
 }
