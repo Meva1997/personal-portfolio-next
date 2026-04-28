@@ -4,7 +4,7 @@
 
 # 👨‍💻 Alejandro Medina | Full Stack Developer
 
-### Transforming ideas into production-ready web applications
+### Building at the intersection of medicine and technology
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF6B35?style=for-the-badge&logo=vercel&logoColor=white)](https://frontend-developer-next.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-fullstack-developer/)
@@ -22,17 +22,17 @@
 
 ## 🚀 About Me
 
-**Full Stack Developer** specializing in building **scalable, user-centric web applications** with modern technologies. U.S. Citizen 🇺🇸
+**Full Stack Developer** with a background as a **licensed physician**. I build software at the intersection of medicine and technology — bringing clinical domain expertise and real-world medical knowledge to healthtech products. U.S. Citizen 🇺🇸
 
 🎯 **What I Bring:**
 
-- ✅ Strong foundation in **frontend and backend development**
-- ✅ Experience building full-stack applications from scratch to deployment
-- ✅ Proven ability to learn new technologies quickly and adapt to team needs
-- ✅ Clear communication and collaborative mindset
-- ✅ Unique background: **Former medical student** → brings discipline, attention to detail, and problem-solving skills
+- ✅ Full-stack development from architecture to deployment
+- ✅ Deep understanding of clinical workflows, medical data, and healthcare domain requirements
+- ✅ Strong foundation in backend systems: auth, role-based access, data validation, and API design
+- ✅ Fast learner who shipped production-ready projects across multiple stacks in under a year
+- ✅ Clear communicator — bridging the gap between engineering teams and medical context
 
-💡 I'm passionate about creating solutions that make a real impact, and I thrive in fast-paced, collaborative environments where I can continuously grow.
+💡 I transitioned into software development because I believe the most impactful healthtech products are built by people who understand both sides — the clinical and the technical.
 
 ---
 
@@ -66,7 +66,6 @@
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
 
 ### Tools & Libraries
 
@@ -86,6 +85,30 @@
 ---
 
 ## 💼 Featured Projects
+
+### 🏥 [MediDash - Clinical Dashboard](https://github.com/Meva1997/medidash-frontend)
+
+> **Full-stack medical dashboard** for clinical teams — manage patients, record consultations, check drug interactions, and track surgical checklists in one place. Designed from real clinical workflow experience.
+
+**Key Features:**
+
+- 🔐 JWT authentication with role-based access control — Doctors have full management access; Nurses are restricted to specific actions (toggling checklist items, updating vitals)
+- 🧑‍⚕️ Patient management with auto-calculated BMI (color-coded by category) and Glasgow Coma Scale scoring with clinical interpretation
+- 📋 Full consultation history per patient — chief complaint, clinical notes, expandable cards with diagnoses and prescriptions per visit
+- 💊 Drug interaction checker — pairwise detection across any drug combination, severity-level alerts with clinical descriptions
+- ✅ Surgical checklist system (WHO safety steps) with per-item timestamp tracking
+- 🛡️ Pydantic field validation with password strength enforcement and name sanitization
+- 🗄️ PostgreSQL with SQLAlchemy CheckConstraints for data integrity at the DB level
+- 📋 Auto-generated interactive API docs via Swagger UI
+
+**Frontend:** Next.js 16 (App Router) · React 19 · TypeScript · TailwindCSS v4 · TanStack Query v5 · React Hook Form + Zod · Axios
+
+**Backend:** Python · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Pydantic · JWT · Uvicorn
+
+
+🔗 [Frontend Code](https://github.com/Meva1997/medidash-frontend) | [Backend Code](https://github.com/Meva1997/medidash-backend)
+
+---
 
 ### 🐾 [PawScout - Pet Management Platform](https://pawscout-frontend.vercel.app/)
 
@@ -112,7 +135,7 @@
 
 ---
 
-### � [CookMate - Recipe Sharing Platform](https://cookmate-app.vercel.app/)
+### 🍳 [CookMate - Recipe Sharing Platform](https://cookmate-app.vercel.app/)
 
 > **Full-stack recipe-sharing application** with React/TypeScript frontend and Node.js/Express backend for culinary enthusiasts
 
@@ -138,83 +161,9 @@
 
 ---
 
-### �🌳 [DevTree - Social Profile Manager](https://devtree-mevadev.netlify.app/)
-
-> **Full-stack MERN application** for managing and showcasing social media profiles in one place
-
-**Key Features:**
-
-- 🔐 User authentication and authorization
-- 📱 Responsive design across all devices
-- 🎨 Modern UI with Tailwind CSS
-- 💾 MongoDB database integration
-
-**Tech:** React · TypeScript · Node.js · Express · MongoDB · Tailwind CSS
-
-🔗 [Live Demo](https://devtree-mevadev.netlify.app/) | [Source Code](https://github.com/Meva1997/deploy_devtree_frontend)
-
----
-
-### 🎵 [Music Discovery Platform](https://music-app-next-rust.vercel.app/login)
-
-> **Next.js web application** for exploring music with dynamic user interactions
-
-**Key Features:**
-
-- 🎬 Smooth animations with Framer Motion
-- 💬 Comment and profile management system
-- 🔄 API integration for music data
-- ⚡ Optimized performance with Next.js
-
-**Tech:** Next.js · React · TypeScript · Framer Motion · API Integration
-
-🔗 [Live Demo](https://music-app-next-rust.vercel.app/login) | [Source Code](https://github.com/Meva1997/music-app-next)
-
----
-
-### 🍹 [Cocktail Recipe Finder](https://cocktail-drinks-alex.netlify.app/)
-
-> **Modern web app** with AI integration for discovering and saving cocktail recipes
-
-**Key Features:**
-
-- 🤖 AI-powered recommendations (OpenRouter)
-- 🔍 Real-time API search functionality
-- 💾 State management with Zustand
-- 📱 Fully responsive design
-
-**Tech:** React · TypeScript · Zustand · Tailwind CSS · OpenRouter AI
-
-🔗 [Live Demo](https://cocktail-drinks-alex.netlify.app/) | [Source Code](https://github.com/Meva1997/cocktail-drinks)
-
----
-
-### 📦 [Inventory Management System](https://ubiquitous-cajeta-d51d8f.netlify.app/)
-
-> **Business solution** for managing product inventory and budget tracking
-
-**Key Features:**
-
-- 📊 Product and budget management
-- 🎯 Clean, intuitive user interface
-- 💾 Efficient state management
-- 📱 Mobile-first responsive design
-
-**Tech:** React · TypeScript · Zustand · Tailwind CSS
-
-🔗 [Live Demo](https://ubiquitous-cajeta-d51d8f.netlify.app/) | [Source Code](https://github.com/Meva1997/yara_inventario_pedidos)
-
-<div align="right">
-
-[⬆️ Back to top](#-quick-navigation)
-
-</div>
-
----
-
 ## 📫 Let's Connect
 
-I'm actively seeking opportunities to contribute to innovative projects and grow as a developer.
+I'm actively looking for full stack or healthtech roles where my medical background and engineering skills create real value.
 
 <div align="center">
 
@@ -228,20 +177,6 @@ I'm actively seeking opportunities to contribute to innovative projects and grow
 
 <div align="center">
 
-### ⚡ Fun Fact
-
-Before transitioning to tech, I studied **medicine** at Universidad Autónoma de Guadalajara.  
-This background gives me a unique perspective on **problem-solving, attention to detail, and continuous learning**.
-
-</div>
-
----
-
-<div align="center">
-
-**Copyright © 2026 Alejandro Medina. All rights reserved.**  
-_This project is for portfolio showcase purposes only._
-
-⭐ **Star this repo if you find it interesting!**
+**Copyright © 2026 Alejandro Medina. All rights reserved.**
 
 </div>
