@@ -161,29 +161,6 @@
 
 ---
 
-### 🌳 [DevTree - Social Profile Manager](https://devtree-mevadev.netlify.app/)
-
-> **Full-stack MERN application** for managing and showcasing social media profiles in one place
-
-**Key Features:**
-
-- 🔐 User authentication and authorization
-- 📱 Responsive design across all devices
-- 🎨 Modern UI with Tailwind CSS
-- 💾 MongoDB database integration
-
-**Tech:** React · TypeScript · Node.js · Express · MongoDB · Tailwind CSS
-
-🔗 [Live Demo](https://devtree-mevadev.netlify.app/) | [Source Code](https://github.com/Meva1997/deploy_devtree_frontend)
-
-<div align="right">
-
-[⬆️ Back to top](#-quick-navigation)
-
-</div>
-
----
-
 ## 📫 Let's Connect
 
 I'm actively looking for full stack or healthtech roles where my medical background and engineering skills create real value.
