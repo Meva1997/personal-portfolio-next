@@ -34,7 +34,7 @@ export default function Footer() {
           >
             Alejandro Medina
           </p>
-          <p style={{ fontSize: "12px", color: "var(--text-muted)" }}>
+          <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
             Full Stack Developer · U.S. Citizen · Open to health tech roles
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
             href="/projects"
             className="footer-link"
             style={{
-              fontSize: "13px",
+              fontSize: "14px",
               color: "var(--text-muted)",
               textDecoration: "none",
             }}
@@ -56,7 +56,7 @@ export default function Footer() {
           <a
             href="mailto:mevadev97@gmail.com"
             style={{
-              fontSize: "13px",
+              fontSize: "14px",
               color: "var(--accent)",
               textDecoration: "none",
             }}
@@ -94,7 +94,7 @@ export default function Footer() {
         style={{
           textAlign: "center",
           paddingBottom: "16px",
-          fontSize: "11px",
+          fontSize: "12px",
           color: "var(--text-muted)",
         }}
       >

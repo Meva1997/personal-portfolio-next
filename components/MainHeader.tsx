@@ -41,12 +41,14 @@ export default function MainHeader() {
       }}
     >
       <div
-        className="flex items-center justify-between px-4 sm:px-6 md:px-8"
+        className="flex items-center justify-between"
         style={{
           height: "64px",
           maxWidth: "1280px",
           margin: "0 auto",
           width: "100%",
+          paddingLeft: "clamp(1.5rem, 5vw, 5rem)",
+          paddingRight: "clamp(1.5rem, 5vw, 5rem)",
         }}
       >
         {/* Logo */}
@@ -69,7 +71,7 @@ export default function MainHeader() {
           href="/Alejandro_Medina_MD_Software_Engineer.pdf"
           download
           className="hidden md:inline-flex items-center gap-2 btn-outline shrink-0"
-          style={{ padding: "0.4rem 1rem", fontSize: "12px" }}
+          style={{ padding: "0.5rem 1.25rem", fontSize: "13px" }}
         >
           Download CV
         </a>

@@ -33,17 +33,19 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 max-w-6xl mx-auto">
+    <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
       {techStack.map((tech, index) => (
         <li
           key={tech.name}
-          className="flex flex-col items-center justify-center p-4 rounded-lg transition-all duration-200 cursor-default group"
+          className="flex flex-col items-center justify-center cursor-default"
           style={{
+            padding: "22px 16px",
             background: "var(--bg-surface)",
             border: "0.5px solid var(--border)",
             borderRadius: "var(--radius-lg)",
             animation: `fadeInUp 0.5s ease-out ${index * 0.05}s forwards`,
             opacity: 0,
+            transition: "border-color 0.2s, background 0.2s",
           }}
           onMouseEnter={(e) => {
             (e.currentTarget as HTMLElement).style.borderColor =
@@ -60,15 +62,15 @@ export default function TechStack() {
         >
           <tech.Icon
             style={{
-              fontSize: "32px",
+              fontSize: "42px",
               color: tech.color,
-              marginBottom: "8px",
+              marginBottom: "12px",
               transition: "transform 0.2s",
             }}
           />
           <span
             style={{
-              fontSize: "10px",
+              fontSize: "12px",
               fontWeight: 500,
               color: "var(--text-muted)",
               letterSpacing: "0.3px",

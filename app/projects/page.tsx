@@ -16,38 +16,38 @@ function FeatureCard({
         background: "var(--bg-surface-2)",
         border: "0.5px solid var(--border)",
         borderRadius: "var(--radius-md)",
-        padding: "16px",
+        padding: "20px",
       }}
     >
       <div
         style={{
-          width: "28px",
-          height: "28px",
-          borderRadius: "6px",
+          width: "32px",
+          height: "32px",
+          borderRadius: "7px",
           background: "var(--accent-dim)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: "10px",
+          marginBottom: "14px",
         }}
       >
         {icon}
       </div>
       <p
         style={{
-          fontSize: "12px",
+          fontSize: "13px",
           fontWeight: 500,
           color: "var(--text-secondary)",
-          marginBottom: "4px",
+          marginBottom: "6px",
         }}
       >
         {title}
       </p>
       <p
         style={{
-          fontSize: "11px",
+          fontSize: "12px",
           color: "var(--text-muted)",
-          lineHeight: "1.55",
+          lineHeight: "1.6",
         }}
       >
         {desc}
@@ -123,9 +123,9 @@ export default function ProjectsPage() {
           </h1>
           <p
             style={{
-              fontSize: "14px",
+              fontSize: "16px",
               color: "var(--text-muted)",
-              maxWidth: "480px",
+              maxWidth: "500px",
               lineHeight: "1.7",
             }}
           >
@@ -158,7 +158,7 @@ export default function ProjectsPage() {
             </p>
             <span
               className="chip chip-tech"
-              style={{ fontSize: "9px", letterSpacing: "1px" }}
+              style={{ fontSize: "11px", letterSpacing: "0.8px" }}
             >
               Flagship
             </span>
@@ -180,10 +180,10 @@ export default function ProjectsPage() {
 
           <p
             style={{
-              fontSize: "13px",
+              fontSize: "15px",
               color: "var(--text-muted)",
               lineHeight: "1.75",
-              maxWidth: "600px",
+              maxWidth: "620px",
               marginBottom: "24px",
             }}
           >
@@ -373,12 +373,12 @@ export default function ProjectsPage() {
                     marginBottom: "12px",
                   }}
                 >
-                  <span className="chip chip-tech" style={{ fontSize: "9px" }}>
+                  <span className="chip chip-tech" style={{ fontSize: "11px" }}>
                     Production architecture
                   </span>
                   <span
                     className="chip chip-neutral"
-                    style={{ fontSize: "9px" }}
+                    style={{ fontSize: "11px" }}
                   >
                     Full stack
                   </span>
@@ -394,10 +394,10 @@ export default function ProjectsPage() {
                 </h3>
                 <p
                   style={{
-                    fontSize: "12px",
+                    fontSize: "14px",
                     color: "var(--text-muted)",
                     lineHeight: "1.7",
-                    maxWidth: "500px",
+                    maxWidth: "520px",
                     marginBottom: "16px",
                   }}
                 >
@@ -433,7 +433,7 @@ export default function ProjectsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
-                  style={{ fontSize: "11px", padding: "7px 18px" }}
+                  style={{ fontSize: "13px", padding: "9px 20px" }}
                 >
                   Live demo
                 </a>
@@ -442,7 +442,7 @@ export default function ProjectsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline"
-                  style={{ fontSize: "11px", padding: "7px 18px" }}
+                  style={{ fontSize: "13px", padding: "9px 20px" }}
                 >
                   View code
                 </a>
@@ -470,10 +470,10 @@ export default function ProjectsPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    fontSize: "11px",
+                    fontSize: "13px",
                     color: "var(--text-muted)",
                     border: "0.5px solid var(--border-md)",
-                    padding: "4px 12px",
+                    padding: "6px 14px",
                     borderRadius: "var(--radius-sm)",
                     background: "rgba(255,255,255,0.03)",
                     textDecoration: "none",

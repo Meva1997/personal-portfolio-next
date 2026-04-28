@@ -27,7 +27,7 @@ function Metric({ value, label }: { value: string; label: string }) {
     <div
       style={{
         textAlign: "center",
-        padding: "8px 12px",
+        padding: "10px 14px",
         background: "var(--bg-surface-2)",
         borderRadius: "var(--radius-md)",
       }}
@@ -35,19 +35,19 @@ function Metric({ value, label }: { value: string; label: string }) {
       <div
         style={{
           fontFamily: "var(--font-display)",
-          fontSize: "18px",
+          fontSize: "20px",
           color: "var(--accent)",
           lineHeight: 1,
-          marginBottom: "4px",
+          marginBottom: "5px",
         }}
       >
         {value}
       </div>
       <div
         style={{
-          fontSize: "9px",
+          fontSize: "11px",
           textTransform: "uppercase",
-          letterSpacing: "1.5px",
+          letterSpacing: "1.2px",
           color: "var(--text-muted)",
         }}
       >
@@ -70,7 +70,7 @@ function TimelineItem({
 }) {
   return (
     <div
-      style={{ display: "flex", gap: "16px", paddingBottom: last ? 0 : "24px" }}
+      style={{ display: "flex", gap: "16px", paddingBottom: last ? 0 : "28px" }}
     >
       <div
         style={{
@@ -83,8 +83,8 @@ function TimelineItem({
       >
         <div
           style={{
-            width: "10px",
-            height: "10px",
+            width: "11px",
+            height: "11px",
             borderRadius: "50%",
             marginTop: "4px",
             flexShrink: 0,
@@ -106,19 +106,19 @@ function TimelineItem({
       <div style={{ paddingBottom: "4px" }}>
         <p
           style={{
-            fontSize: "14px",
+            fontSize: "15px",
             fontWeight: 500,
             color: "var(--text-primary)",
-            marginBottom: "4px",
+            marginBottom: "6px",
           }}
         >
           {title}
         </p>
         <p
           style={{
-            fontSize: "12px",
+            fontSize: "14px",
             color: "var(--text-muted)",
-            lineHeight: "1.65",
+            lineHeight: "1.7",
           }}
         >
           {desc}
@@ -143,38 +143,38 @@ function FeatureCard({
         background: "var(--bg-surface-2)",
         border: "0.5px solid var(--border)",
         borderRadius: "var(--radius-md)",
-        padding: "16px",
+        padding: "20px",
       }}
     >
       <div
         style={{
-          width: "28px",
-          height: "28px",
-          borderRadius: "6px",
+          width: "32px",
+          height: "32px",
+          borderRadius: "7px",
           background: "var(--accent-dim)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: "12px",
+          marginBottom: "14px",
         }}
       >
         {icon}
       </div>
       <p
         style={{
-          fontSize: "12px",
+          fontSize: "13px",
           fontWeight: 500,
           color: "var(--text-secondary)",
-          marginBottom: "4px",
+          marginBottom: "6px",
         }}
       >
         {title}
       </p>
       <p
         style={{
-          fontSize: "11px",
+          fontSize: "12px",
           color: "var(--text-muted)",
-          lineHeight: "1.55",
+          lineHeight: "1.6",
         }}
       >
         {desc}
@@ -265,12 +265,12 @@ export default function Home() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  fontSize: "10px",
+                  fontSize: "12px",
                   textTransform: "uppercase",
-                  letterSpacing: "1.5px",
+                  letterSpacing: "1.2px",
                   color: "var(--accent)",
                   border: "0.5px solid var(--accent-border)",
-                  padding: "4px 12px",
+                  padding: "6px 14px",
                   borderRadius: "var(--radius-sm)",
                   marginBottom: "24px",
                 }}
@@ -309,11 +309,11 @@ export default function Home() {
 
               <p
                 style={{
-                  fontSize: "14px",
+                  fontSize: "16px",
                   color: "var(--text-muted)",
                   lineHeight: 1.75,
                   marginBottom: "32px",
-                  maxWidth: "420px",
+                  maxWidth: "440px",
                 }}
               >
                 <span
@@ -356,8 +356,8 @@ export default function Home() {
                   background: "var(--bg-surface)",
                   border: "0.5px solid var(--accent-border)",
                   color: "var(--accent)",
-                  fontSize: "10px",
-                  padding: "4px 12px",
+                  fontSize: "12px",
+                  padding: "5px 13px",
                   borderRadius: "var(--radius-md)",
                   display: "flex",
                   alignItems: "center",
@@ -386,9 +386,9 @@ export default function Home() {
               >
                 <div
                   style={{
-                    fontSize: "9px",
+                    fontSize: "11px",
                     textTransform: "uppercase",
-                    letterSpacing: "1.5px",
+                    letterSpacing: "1.2px",
                     color: "var(--accent)",
                     marginBottom: "12px",
                   }}
@@ -419,8 +419,8 @@ export default function Home() {
                   background: "var(--bg-surface)",
                   border: "0.5px solid var(--accent-border)",
                   color: "var(--text-secondary)",
-                  fontSize: "10px",
-                  padding: "4px 12px",
+                  fontSize: "12px",
+                  padding: "5px 13px",
                   borderRadius: "var(--radius-md)",
                   display: "flex",
                   alignItems: "center",
@@ -474,7 +474,7 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontSize: "13px",
+              fontSize: "15px",
               color: "var(--text-muted)",
               lineHeight: 1.75,
               marginBottom: "20px",
@@ -514,7 +514,7 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontSize: "13px",
+              fontSize: "15px",
               color: "var(--text-muted)",
               lineHeight: 1.75,
               marginBottom: "20px",
@@ -611,7 +611,7 @@ export default function Home() {
             </p>
             <span
               className="chip chip-tech"
-              style={{ fontSize: "9px", letterSpacing: "1px" }}
+              style={{ fontSize: "11px", letterSpacing: "0.8px" }}
             >
               Flagship
             </span>
@@ -631,10 +631,10 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontSize: "13px",
+              fontSize: "15px",
               color: "var(--text-muted)",
               lineHeight: 1.75,
-              maxWidth: "580px",
+              maxWidth: "600px",
               marginBottom: "24px",
             }}
           >
