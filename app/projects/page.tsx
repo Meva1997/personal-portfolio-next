@@ -1,61 +1,500 @@
 import Footer from "@/components/Footer";
 import MainHeader from "@/components/MainHeader";
-import ProjectCard from "@/components/ProjectCard";
-import ProjectCardSkeleton from "@/components/skeletons/ProjectCardSkeleton";
-import { Suspense } from "react";
+
+function FeatureCard({
+  icon,
+  title,
+  desc,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <div
+      style={{
+        background: "var(--bg-surface-2)",
+        border: "0.5px solid var(--border)",
+        borderRadius: "var(--radius-md)",
+        padding: "16px",
+      }}
+    >
+      <div
+        style={{
+          width: "28px",
+          height: "28px",
+          borderRadius: "6px",
+          background: "var(--accent-dim)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "10px",
+        }}
+      >
+        {icon}
+      </div>
+      <p
+        style={{
+          fontSize: "12px",
+          fontWeight: 500,
+          color: "var(--text-secondary)",
+          marginBottom: "4px",
+        }}
+      >
+        {title}
+      </p>
+      <p
+        style={{
+          fontSize: "11px",
+          color: "var(--text-muted)",
+          lineHeight: "1.55",
+        }}
+      >
+        {desc}
+      </p>
+    </div>
+  );
+}
+
+const ghProjects = [
+  {
+    name: "CookMate",
+    stack: "MERN stack",
+    url: "https://github.com/Meva1997/cookMate_frontend",
+  },
+  {
+    name: "Pokemon TCG",
+    stack: "SERN stack",
+    url: "https://github.com/Meva1997/frontend-pokemonTCG-ecommerce",
+  },
+];
+
+const medidashChips = [
+  "Next.js 16",
+  "React 19",
+  "TypeScript",
+  "TailwindCSS v4",
+  "TanStack Query v5",
+  "Python",
+  "FastAPI",
+  "PostgreSQL",
+  "SQLAlchemy",
+  "Alembic",
+  "JWT",
+  "Pydantic",
+];
+const pawscoutChips = [
+  "Next.js 16",
+  "React 19",
+  "FastAPI",
+  "PostgreSQL",
+  "SQLModel",
+  "TanStack Query",
+  "httpOnly JWT",
+  "Cloudinary",
+];
 
 export default function ProjectsPage() {
   return (
     <>
       <MainHeader />
-      <main className="relative flex flex-col items-center justify-center px-4 mx-auto my-20 space-y-10">
-        {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 bg-orange-500 rounded-full opacity-10 blur-3xl top-20 left-10 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-yellow-500 rounded-full opacity-10 blur-3xl bottom-20 right-10 animate-pulse"></div>
+
+      <main
+        style={{
+          maxWidth: "1152px",
+          margin: "0 auto",
+          padding: "64px 32px",
+          minHeight: "calc(100vh - 64px)",
+        }}
+      >
+        {/* Header */}
+        <div style={{ marginBottom: "48px" }}>
+          <p className="section-label">Portfolio</p>
+          <h1
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(32px, 4vw, 48px)",
+              lineHeight: "1.08",
+              letterSpacing: "-0.5px",
+              marginBottom: "16px",
+            }}
+          >
+            Projects
+          </h1>
+          <p
+            style={{
+              fontSize: "14px",
+              color: "var(--text-muted)",
+              maxWidth: "480px",
+              lineHeight: "1.7",
+            }}
+          >
+            Production-grade applications built across health tech, full stack
+            architecture, and clinical domain problems.
+          </p>
         </div>
 
-        {/* Header section */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="mb-6 animate-fadeInUp">
-            <span className="px-4 py-2 text-sm font-semibold text-orange-300 border border-orange-500 rounded-full bg-orange-950/50">
-              🚀 Portfolio
+        {/* ── MEDIDASH FLAGSHIP ── */}
+        <div
+          style={{
+            marginBottom: "24px",
+            padding: "32px",
+            background: "var(--bg-surface)",
+            border: "0.5px solid var(--border)",
+            borderRadius: "var(--radius-lg)",
+            borderLeft: "2px solid var(--accent)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              marginBottom: "16px",
+            }}
+          >
+            <p className="section-label" style={{ margin: 0 }}>
+              Featured project
+            </p>
+            <span
+              className="chip chip-tech"
+              style={{ fontSize: "9px", letterSpacing: "1px" }}
+            >
+              Flagship
             </span>
           </div>
 
-          <h1
-            className="mb-6 text-5xl font-bold md:text-6xl gradient-text animate-fadeInUp"
-            style={{ animationDelay: "0.2s", opacity: 0 }}
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "28px",
+              marginBottom: "12px",
+            }}
           >
-            My Projects
-          </h1>
+            Medi
+            <em style={{ color: "var(--accent)", fontStyle: "italic" }}>
+              Dash
+            </em>{" "}
+            — clinical dashboard
+          </h2>
 
           <p
-            className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-300 animate-fadeInUp"
-            style={{ animationDelay: "0.4s", opacity: 0 }}
+            style={{
+              fontSize: "13px",
+              color: "var(--text-muted)",
+              lineHeight: "1.75",
+              maxWidth: "600px",
+              marginBottom: "24px",
+            }}
           >
-            Explore a collection of my recent projects, showcasing my expertise
-            in modern web development, responsive design, and innovative
-            solutions.
+            A full-stack medical dashboard for clinical teams. Not a CRUD app —
+            built with real clinical logic: pairwise drug interaction detection,
+            auto-calculated BMI and Glasgow Coma Scale scoring, WHO-compliant
+            surgical checklists, and JWT role-based access separating doctor and
+            nurse permissions.
           </p>
 
           <div
-            className="inline-flex items-center gap-2 px-4 py-3 mt-6 text-sm border border-yellow-500/50 rounded-lg bg-yellow-950/30 animate-fadeInUp"
-            style={{ animationDelay: "0.6s", opacity: 0 }}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "12px",
+              marginBottom: "24px",
+            }}
           >
-            <span className="text-yellow-400">⚠️</span>
-            <p className="text-yellow-300">
-              Note: Some projects may have extended loading times due to
-              free-tier hosting.
-            </p>
+            <FeatureCard
+              icon={
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <rect
+                    x="1"
+                    y="6"
+                    width="12"
+                    height="2"
+                    rx="1"
+                    fill="#2FCCAA"
+                  />
+                  <rect
+                    x="6"
+                    y="1"
+                    width="2"
+                    height="12"
+                    rx="1"
+                    fill="#2FCCAA"
+                  />
+                </svg>
+              }
+              title="Drug interaction checker"
+              desc="Pairwise detection across any combination with severity-level alerts"
+            />
+            <FeatureCard
+              icon={
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <circle
+                    cx="7"
+                    cy="7"
+                    r="5.5"
+                    stroke="#2FCCAA"
+                    strokeWidth="1.2"
+                  />
+                  <path
+                    d="M7 4v3l2 1.5"
+                    stroke="#2FCCAA"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              }
+              title="Role-based access"
+              desc="JWT auth with doctor vs nurse permissions enforced at API level"
+            />
+            <FeatureCard
+              icon={
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M2 10L5 7l3 2 4-5"
+                    stroke="#2FCCAA"
+                    strokeWidth="1.3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              }
+              title="Clinical scoring"
+              desc="Auto-calculated BMI and Glasgow Coma Scale with clinical interpretation"
+            />
+            <FeatureCard
+              icon={
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <rect
+                    x="2"
+                    y="2"
+                    width="10"
+                    height="10"
+                    rx="2"
+                    stroke="#2FCCAA"
+                    strokeWidth="1.2"
+                  />
+                  <path
+                    d="M5 7l1.5 1.5L9 5"
+                    stroke="#2FCCAA"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              }
+              title="WHO surgical checklist"
+              desc="Per-item timestamp tracking following surgical safety standards"
+            />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "6px",
+              marginBottom: "24px",
+            }}
+          >
+            {medidashChips.map((t) => (
+              <span key={t} className="chip chip-neutral">
+                {t}
+              </span>
+            ))}
+          </div>
+
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a
+              href="https://github.com/Meva1997/medidash-frontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Frontend code
+            </a>
+            <a
+              href="https://github.com/Meva1997/medidash-backend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Backend code
+            </a>
           </div>
         </div>
 
-        {/* Projects grid */}
-        <div className="relative z-10 w-full">
-          <Suspense fallback={<ProjectCardSkeleton />}>
-            <ProjectCard />
-          </Suspense>
+        {/* ── OTHER PROJECTS ── */}
+        <div
+          style={{
+            borderTop: "0.5px solid var(--border)",
+            paddingTop: "32px",
+            marginTop: "32px",
+          }}
+        >
+          <p className="section-label">More work</p>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "24px",
+              marginBottom: "24px",
+            }}
+          >
+            Other{" "}
+            <em style={{ color: "var(--accent)", fontStyle: "italic" }}>
+              projects
+            </em>
+          </h2>
+
+          {/* PawScout */}
+          <div
+            style={{
+              padding: "24px",
+              marginBottom: "16px",
+              background: "var(--bg-surface)",
+              border: "0.5px solid var(--border)",
+              borderRadius: "var(--radius-lg)",
+              borderLeft: "2px solid rgba(47,204,170,0.4)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                gap: "24px",
+              }}
+            >
+              <div style={{ flex: 1 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  <span className="chip chip-tech" style={{ fontSize: "9px" }}>
+                    Production architecture
+                  </span>
+                  <span
+                    className="chip chip-neutral"
+                    style={{ fontSize: "9px" }}
+                  >
+                    Full stack
+                  </span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: "20px",
+                    marginBottom: "8px",
+                  }}
+                >
+                  PawScout
+                </h3>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    color: "var(--text-muted)",
+                    lineHeight: "1.7",
+                    maxWidth: "500px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Demonstrates{" "}
+                  <span
+                    style={{ color: "var(--text-secondary)", fontWeight: 500 }}
+                  >
+                    production-grade full stack architecture
+                  </span>{" "}
+                  — Next.js 16 App Router with React Server Components, FastAPI
+                  backend with JWT stored in httpOnly cookies, optimistic
+                  updates via TanStack Query, and Cloudinary for media delivery.
+                  Deployed on Vercel + Render.
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                  {pawscoutChips.map((t) => (
+                    <span key={t} className="chip chip-neutral">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                  flexShrink: 0,
+                }}
+              >
+                <a
+                  href="https://paw-scout.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{ fontSize: "11px", padding: "7px 18px" }}
+                >
+                  Live demo
+                </a>
+                <a
+                  href="https://github.com/Meva1997/PawScout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                  style={{ fontSize: "11px", padding: "7px 18px" }}
+                >
+                  View code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Also on GitHub */}
+          <div
+            style={{
+              marginTop: "24px",
+              paddingTop: "24px",
+              borderTop: "0.5px solid var(--border)",
+            }}
+          >
+            <p className="section-label">Also on GitHub</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+              {ghProjects.map((p) => (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "11px",
+                    color: "var(--text-muted)",
+                    border: "0.5px solid var(--border-md)",
+                    padding: "4px 12px",
+                    borderRadius: "var(--radius-sm)",
+                    background: "rgba(255,255,255,0.03)",
+                    textDecoration: "none",
+                    transition: "color 0.2s, border-color 0.2s",
+                  }}
+                >
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      background: "var(--text-muted)",
+                      flexShrink: 0,
+                      display: "inline-block",
+                    }}
+                  />
+                  {p.name} — {p.stack}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
 

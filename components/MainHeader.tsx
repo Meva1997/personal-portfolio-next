@@ -1,70 +1,132 @@
 "use client";
-import Image from "next/image";
-import NavBar from "./NavBar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-import Link from "next/link";
+
+function NavLink({ href, text }: { href: string; text: string }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  return (
+    <Link
+      href={href}
+      className="relative text-sm uppercase tracking-widest transition-colors duration-200"
+      style={{
+        color: isActive ? "var(--accent)" : "var(--text-muted)",
+        letterSpacing: "0.08em",
+      }}
+    >
+      {text}
+      {isActive && (
+        <span
+          className="absolute -bottom-1 left-0 w-full h-px"
+          style={{ background: "var(--accent)" }}
+        />
+      )}
+    </Link>
+  );
+}
 
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-end px-4 border-b border-gray-800 h-28 md:justify-center glass-effect">
-      {/* Logo */}
-      <div className="absolute top-0 left-0 transition-transform duration-300 hover:scale-105">
-        <Link href={"/"}>
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={100}
-            height={100}
-            className="h-26 w-26"
-            priority
-          />
+    <header
+      className="sticky top-0 z-50"
+      style={{
+        background: "rgba(5, 9, 15, 0.92)",
+        backdropFilter: "blur(12px)",
+        borderBottom: "0.5px solid var(--border)",
+      }}
+    >
+      <div
+        className="flex items-center justify-between px-4 sm:px-6 md:px-8"
+        style={{
+          height: "64px",
+          maxWidth: "1280px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="font-display text-lg shrink-0"
+          style={{ color: "var(--text-primary)", letterSpacing: "-0.3px" }}
+        >
+          Alex<span style={{ color: "var(--accent)" }}>.</span>dev
         </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          <NavLink href="/" text="Home" />
+          <NavLink href="/projects" text="Projects" />
+        </nav>
+
+        {/* CTA */}
+        <a
+          href="/Alejandro_Medina_MD_Software_Engineer.pdf"
+          download
+          className="hidden md:inline-flex items-center gap-2 btn-outline shrink-0"
+          style={{ padding: "0.4rem 1rem", fontSize: "12px" }}
+        >
+          Download CV
+        </a>
+
+        {/* Mobile hamburger */}
+        {!isMenuOpen && (
+          <button
+            className="md:hidden transition-colors duration-200 p-1"
+            style={{ color: "var(--accent)" }}
+            aria-label="Open menu"
+            onClick={() => setIsMenuOpen(true)}
+          >
+            <GiHamburgerMenu size={22} />
+          </button>
+        )}
       </div>
 
-      {/* Hamburger button (mobile) */}
-      {!isMenuOpen && (
-        <button
-          className="z-50 transition-all duration-300 cursor-pointer md:hidden text-orange-400 hover:text-orange-300 hover:scale-110"
-          aria-label="Abrir menú"
-          onClick={() => setIsMenuOpen(true)}
-        >
-          <GiHamburgerMenu size={30} />
-        </button>
-      )}
-
-      {/* Nav links (desktop) */}
-      <nav className="items-center justify-center hidden space-x-8 md:flex">
-        <NavBar href="/" text="Home" />
-        <NavBar href="/projects" text="Projects" />
-        <NavBar href="/contact" text="Contact" />
-      </nav>
-
-      {/* Mobile menu (hamburger open) */}
+      {/* Mobile menu */}
       {isMenuOpen && (
         <>
-          {/* Overlay */}
           <div
-            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+            className="fixed inset-0 z-40 md:hidden"
+            style={{
+              background: "rgba(3,6,8,0.7)",
+              backdropFilter: "blur(4px)",
+            }}
             onClick={() => setIsMenuOpen(false)}
           />
-
-          {/* Mobile nav */}
-          <nav className="absolute right-4 z-50 flex flex-col w-64 p-6 space-y-6 border border-gray-800 glass-effect rounded-2xl top-5 md:hidden animate-slideInRight">
-            {/* Close Button */}
+          <nav
+            className="fixed right-4 z-50 flex flex-col p-6 gap-6 md:hidden animate-slideInRight"
+            style={{
+              top: "72px",
+              background: "var(--bg-surface)",
+              border: "0.5px solid var(--border-md)",
+              borderRadius: "var(--radius-lg)",
+              minWidth: "220px",
+              maxWidth: "calc(100vw - 2rem)",
+            }}
+          >
             <button
-              className="self-end mb-4 transition-all duration-300 text-orange-400 hover:text-orange-300 hover:rotate-90"
-              aria-label="Cerrar menú"
+              className="self-end transition-colors duration-200 p-1"
+              style={{ color: "var(--accent)" }}
+              aria-label="Close menu"
               onClick={() => setIsMenuOpen(false)}
             >
-              <IoCloseSharp size={30} />
+              <IoCloseSharp size={22} />
             </button>
-            <NavBar href="/" text="Home" />
-            <NavBar href="/projects" text="Projects" />
-            <NavBar href="/contact" text="Contact" />
+            <NavLink href="/" text="Home" />
+            <NavLink href="/projects" text="Projects" />
+            <a
+              href="/Alejandro_Medina_MD_Software_Engineer.pdf"
+              download
+              className="btn-outline text-xs"
+              style={{ padding: "0.5rem 1rem", textAlign: "center" }}
+            >
+              Download CV
+            </a>
           </nav>
         </>
       )}
