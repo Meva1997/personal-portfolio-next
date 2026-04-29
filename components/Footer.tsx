@@ -14,7 +14,7 @@ export default function Footer() {
         style={{
           maxWidth: "1152px",
           margin: "0 auto",
-          padding: "40px 32px",
+          padding: "40px clamp(16px, 4vw, 32px)",
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",

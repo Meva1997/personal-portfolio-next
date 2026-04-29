@@ -103,7 +103,7 @@ export default function ProjectsPage() {
         style={{
           maxWidth: "1152px",
           margin: "0 auto",
-          padding: "64px 32px",
+          padding: "64px clamp(16px, 4vw, 32px)",
           minHeight: "calc(100vh - 64px)",
         }}
       >
@@ -138,7 +138,7 @@ export default function ProjectsPage() {
         <div
           style={{
             marginBottom: "24px",
-            padding: "32px",
+            padding: "clamp(20px, 3vw, 32px)",
             background: "var(--bg-surface)",
             border: "0.5px solid var(--border)",
             borderRadius: "var(--radius-lg)",
@@ -158,7 +158,11 @@ export default function ProjectsPage() {
             </p>
             <span
               className="chip chip-tech"
-              style={{ fontSize: "11px", letterSpacing: "0.8px" }}
+              style={{
+                fontSize: "11px",
+                letterSpacing: "0.8px",
+                padding: "4px 10px",
+              }}
             >
               Flagship
             </span>
@@ -195,12 +199,8 @@ export default function ProjectsPage() {
           </p>
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "12px",
-              marginBottom: "24px",
-            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"
+            style={{ marginBottom: "24px" }}
           >
             <FeatureCard
               icon={
@@ -297,7 +297,11 @@ export default function ProjectsPage() {
             }}
           >
             {medidashChips.map((t) => (
-              <span key={t} className="chip chip-neutral">
+              <span
+                key={t}
+                className="chip chip-neutral"
+                style={{ padding: "4px 10px", fontSize: "11px" }}
+              >
                 {t}
               </span>
             ))}
@@ -309,6 +313,7 @@ export default function ProjectsPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
+              style={{ padding: "4px 10px" }}
             >
               Frontend code
             </a>
@@ -317,6 +322,7 @@ export default function ProjectsPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
+              style={{ padding: "4px 10px" }}
             >
               Backend code
             </a>
@@ -348,7 +354,7 @@ export default function ProjectsPage() {
           {/* PawScout */}
           <div
             style={{
-              padding: "24px",
+              padding: "clamp(16px, 3vw, 24px)",
               marginBottom: "16px",
               background: "var(--bg-surface)",
               border: "0.5px solid var(--border)",
@@ -356,14 +362,7 @@ export default function ProjectsPage() {
               borderLeft: "2px solid rgba(47,204,170,0.4)",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "space-between",
-                gap: "24px",
-              }}
-            >
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
               <div style={{ flex: 1 }}>
                 <div
                   style={{
@@ -373,12 +372,15 @@ export default function ProjectsPage() {
                     marginBottom: "12px",
                   }}
                 >
-                  <span className="chip chip-tech" style={{ fontSize: "11px" }}>
+                  <span
+                    className="chip chip-tech"
+                    style={{ fontSize: "11px", padding: "4px 10px" }}
+                  >
                     Production architecture
                   </span>
                   <span
                     className="chip chip-neutral"
-                    style={{ fontSize: "11px" }}
+                    style={{ fontSize: "11px", padding: "4px 10px" }}
                   >
                     Full stack
                   </span>
@@ -414,20 +416,17 @@ export default function ProjectsPage() {
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
                   {pawscoutChips.map((t) => (
-                    <span key={t} className="chip chip-neutral">
+                    <span
+                      key={t}
+                      className="chip chip-neutral"
+                      style={{ padding: "4px 10px", fontSize: "11px" }}
+                    >
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "8px",
-                  flexShrink: 0,
-                }}
-              >
+              <div className="flex flex-row sm:flex-col gap-3 sm:gap-2 flex-shrink-0">
                 <a
                   href="https://paw-scout.vercel.app/"
                   target="_blank"

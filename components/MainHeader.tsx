@@ -5,12 +5,21 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 
-function NavLink({ href, text }: { href: string; text: string }) {
+function NavLink({
+  href,
+  text,
+  onClick,
+}: {
+  href: string;
+  text: string;
+  onClick?: () => void;
+}) {
   const pathname = usePathname();
   const isActive = pathname === href;
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="relative text-sm uppercase tracking-widest transition-colors duration-200"
       style={{
         color: isActive ? "var(--accent)" : "var(--text-muted)",
@@ -30,6 +39,7 @@ function NavLink({ href, text }: { href: string; text: string }) {
 
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const close = () => setIsMenuOpen(false);
 
   return (
     <header
@@ -66,7 +76,7 @@ export default function MainHeader() {
           <NavLink href="/projects" text="Projects" />
         </nav>
 
-        {/* CTA */}
+        {/* Desktop CTA */}
         <a
           href="/Alejandro_Medina_MD_Software_Engineer.pdf"
           download
@@ -76,59 +86,78 @@ export default function MainHeader() {
           Download CV
         </a>
 
-        {/* Mobile hamburger */}
-        {!isMenuOpen && (
-          <button
-            className="md:hidden transition-colors duration-200 p-1"
-            style={{ color: "var(--accent)" }}
-            aria-label="Open menu"
-            onClick={() => setIsMenuOpen(true)}
-          >
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden transition-colors duration-200 p-2 -mr-1"
+          style={{ color: "var(--accent)" }}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setIsMenuOpen((v) => !v)}
+        >
+          {isMenuOpen ? (
+            <IoCloseSharp size={22} />
+          ) : (
             <GiHamburgerMenu size={22} />
-          </button>
-        )}
+          )}
+        </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full-width panel below the header bar */}
       {isMenuOpen && (
         <>
+          {/* Backdrop */}
           <div
             className="fixed inset-0 z-40 md:hidden"
-            style={{
-              background: "rgba(3,6,8,0.7)",
-              backdropFilter: "blur(4px)",
-            }}
-            onClick={() => setIsMenuOpen(false)}
+            style={{ top: "64px", background: "rgba(3,6,8,0.55)" }}
+            onClick={close}
           />
+
+          {/* Dropdown panel */}
           <nav
-            className="fixed right-4 z-50 flex flex-col p-6 gap-6 md:hidden animate-slideInRight"
+            className="absolute left-0 right-0 z-50 md:hidden animate-slideDown"
             style={{
-              top: "72px",
-              background: "var(--bg-surface)",
-              border: "0.5px solid var(--border-md)",
-              borderRadius: "var(--radius-lg)",
-              minWidth: "220px",
-              maxWidth: "calc(100vw - 2rem)",
+              top: "64px",
+              background: "rgba(12, 21, 32, 0.98)",
+              backdropFilter: "blur(16px)",
+              borderBottom: "0.5px solid var(--border-md)",
             }}
           >
-            <button
-              className="self-end transition-colors duration-200 p-1"
-              style={{ color: "var(--accent)" }}
-              aria-label="Close menu"
-              onClick={() => setIsMenuOpen(false)}
+            <div
+              style={{
+                maxWidth: "1280px",
+                margin: "0 auto",
+                paddingLeft: "clamp(1.5rem, 5vw, 5rem)",
+                paddingRight: "clamp(1.5rem, 5vw, 5rem)",
+                paddingTop: "1.75rem",
+                paddingBottom: "1.75rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.5rem",
+              }}
             >
-              <IoCloseSharp size={22} />
-            </button>
-            <NavLink href="/" text="Home" />
-            <NavLink href="/projects" text="Projects" />
-            <a
-              href="/Alejandro_Medina_MD_Software_Engineer.pdf"
-              download
-              className="btn-outline text-xs"
-              style={{ padding: "0.5rem 1rem", textAlign: "center" }}
-            >
-              Download CV
-            </a>
+              <NavLink href="/" text="Home" onClick={close} />
+              <NavLink href="/projects" text="Projects" onClick={close} />
+
+              <div
+                style={{
+                  borderTop: "0.5px solid var(--border-md)",
+                  paddingTop: "1.25rem",
+                }}
+              >
+                <a
+                  href="/Alejandro_Medina_MD_Software_Engineer.pdf"
+                  download
+                  className="btn-outline"
+                  style={{
+                    display: "inline-block",
+                    padding: ".6rem 1.5rem",
+                    fontSize: "13px",
+                  }}
+                  onClick={close}
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
           </nav>
         </>
       )}

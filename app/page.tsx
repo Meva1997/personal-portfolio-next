@@ -240,7 +240,7 @@ export default function Home() {
             zIndex: 10,
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "80px 32px",
+            padding: "80px clamp(16px, 4vw, 32px)",
             minHeight: "calc(100vh - 64px)",
             display: "flex",
             flexDirection: "column",
@@ -249,14 +249,7 @@ export default function Home() {
           }}
         >
           {/* Two-column on large screens */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr auto",
-              gap: "48px",
-              alignItems: "center",
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">
             {/* Left — copy */}
             <div style={{ maxWidth: "520px" }}>
               {/* Badge */}
@@ -327,24 +320,27 @@ export default function Home() {
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-                <Link href="/projects" className="btn-primary">
+                <Link
+                  href="/projects"
+                  className="btn-primary"
+                  style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
+                >
                   View MediDash
                 </Link>
                 <a
                   href="/Alejandro_Medina_MD_Software_Engineer.pdf"
                   download
                   className="btn-outline"
+                  style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
                 >
                   Download CV
                 </a>
-                <Link href="/contact" className="btn-outline">
-                  Get in touch
-                </Link>
               </div>
             </div>
 
             {/* Right — ECG card */}
             <div
+              className="block"
               style={{ position: "relative", width: "300px", flexShrink: 0 }}
             >
               <div
@@ -445,18 +441,10 @@ export default function Home() {
 
       {/* ── DUAL IDENTITY ── */}
       <section
-        style={{
-          borderTop: "0.5px solid var(--border)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-        }}
+        className="grid grid-cols-1 md:grid-cols-2"
+        style={{ borderTop: "0.5px solid var(--border)" }}
       >
-        <div
-          style={{
-            padding: "40px 48px",
-            borderRight: "0.5px solid var(--border)",
-          }}
-        >
+        <div className="dual-col-left">
           <p className="section-label">Engineering</p>
           <h2
             style={{
@@ -490,14 +478,18 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
             {techChips.map((t) => (
-              <span key={t} className="chip chip-tech">
+              <span
+                key={t}
+                className="chip chip-tech"
+                style={{ padding: "4px 10px", fontSize: "11px" }}
+              >
                 {t}
               </span>
             ))}
           </div>
         </div>
 
-        <div style={{ padding: "40px 48px" }}>
+        <div className="dual-col-right">
           <p className="section-label">Medicine</p>
           <h2
             style={{
@@ -529,7 +521,11 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
             {medChips.map((t) => (
-              <span key={t} className="chip chip-med">
+              <span
+                key={t}
+                className="chip chip-med"
+                style={{ padding: "4px 10px", fontSize: "11px" }}
+              >
                 {t}
               </span>
             ))}
@@ -539,15 +535,12 @@ export default function Home() {
 
       {/* ── WHY HEALTH TECH ── */}
       <section
+        className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-16 items-start"
         style={{
           borderTop: "0.5px solid var(--border)",
           maxWidth: "1152px",
           margin: "0 auto",
-          padding: "64px 32px",
-          display: "grid",
-          gridTemplateColumns: "200px 1fr",
-          gap: "64px",
-          alignItems: "start",
+          padding: "64px clamp(16px, 4vw, 32px)",
         }}
       >
         <div>
@@ -596,7 +589,11 @@ export default function Home() {
         }}
       >
         <div
-          style={{ maxWidth: "1152px", margin: "0 auto", padding: "0 32px" }}
+          style={{
+            maxWidth: "1152px",
+            margin: "0 auto",
+            padding: "0 clamp(16px, 4vw, 32px)",
+          }}
         >
           <div
             style={{
@@ -611,7 +608,11 @@ export default function Home() {
             </p>
             <span
               className="chip chip-tech"
-              style={{ fontSize: "11px", letterSpacing: "0.8px" }}
+              style={{
+                fontSize: "11px",
+                letterSpacing: "0.8px",
+                padding: "4px 10px",
+              }}
             >
               Flagship
             </span>
@@ -645,12 +646,8 @@ export default function Home() {
             permissions.
           </p>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "12px",
-              marginBottom: "24px",
-            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"
+            style={{ marginBottom: "24px" }}
           >
             <FeatureCard
               icon={
@@ -746,7 +743,11 @@ export default function Home() {
             }}
           >
             {medidashChips.map((t) => (
-              <span key={t} className="chip chip-neutral">
+              <span
+                key={t}
+                className="chip chip-neutral"
+                style={{ padding: "4px 10px", fontSize: "11px" }}
+              >
                 {t}
               </span>
             ))}
@@ -757,6 +758,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
+              style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
             >
               View frontend code
             </a>
@@ -765,6 +767,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
+              style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
             >
               View backend code
             </a>
@@ -778,7 +781,7 @@ export default function Home() {
           borderTop: "0.5px solid var(--border)",
           maxWidth: "1152px",
           margin: "0 auto",
-          padding: "64px 32px",
+          padding: "64px clamp(16px, 4vw, 32px)",
         }}
       >
         <p className="section-label" style={{ textAlign: "center" }}>
