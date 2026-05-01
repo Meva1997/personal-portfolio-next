@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import MainHeader from "@/components/MainHeader";
 import TechStack from "@/components/TechStack";
 import Link from "next/link";
+import Image from "next/image";
 
 function EcgLine() {
   return (
@@ -651,22 +652,22 @@ export default function Home() {
           >
             <FeatureCard
               icon={
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
                   <rect
-                    x="1"
-                    y="6"
                     width="12"
                     height="2"
+                    x="1"
+                    y="6"
+                    fill="#2fccaa"
                     rx="1"
-                    fill="#2FCCAA"
                   />
                   <rect
-                    x="6"
-                    y="1"
                     width="2"
                     height="12"
+                    x="6"
+                    y="1"
+                    fill="#2fccaa"
                     rx="1"
-                    fill="#2FCCAA"
                   />
                 </svg>
               }
@@ -675,19 +676,19 @@ export default function Home() {
             />
             <FeatureCard
               icon={
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
                   <circle
                     cx="7"
                     cy="7"
                     r="5.5"
-                    stroke="#2FCCAA"
+                    stroke="#2fccaa"
                     strokeWidth="1.2"
                   />
                   <path
-                    d="M7 4v3l2 1.5"
-                    stroke="#2FCCAA"
-                    strokeWidth="1.2"
+                    stroke="#2fccaa"
                     strokeLinecap="round"
+                    strokeWidth="1.2"
+                    d="M7 4v3l2 1.5"
                   />
                 </svg>
               }
@@ -696,13 +697,13 @@ export default function Home() {
             />
             <FeatureCard
               icon={
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
                   <path
-                    d="M2 10L5 7l3 2 4-5"
-                    stroke="#2FCCAA"
-                    strokeWidth="1.3"
+                    stroke="#2fccaa"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeWidth="1.3"
+                    d="m2 10 3-3 3 2 4-5"
                   />
                 </svg>
               }
@@ -711,22 +712,22 @@ export default function Home() {
             />
             <FeatureCard
               icon={
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
                   <rect
-                    x="2"
-                    y="2"
                     width="10"
                     height="10"
-                    rx="2"
-                    stroke="#2FCCAA"
+                    x="2"
+                    y="2"
+                    stroke="#2fccaa"
                     strokeWidth="1.2"
+                    rx="2"
                   />
                   <path
-                    d="M5 7l1.5 1.5L9 5"
-                    stroke="#2FCCAA"
-                    strokeWidth="1.2"
+                    stroke="#2fccaa"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeWidth="1.2"
+                    d="m5 7 1.5 1.5L9 5"
                   />
                 </svg>
               }
@@ -752,15 +753,24 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "40px" }}>
             <a
-              href="https://github.com/Meva1997/medidash-frontend"
+              href="https://medidash-frontend.vercel.app/login"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
               style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
             >
-              View frontend code
+              Live demo
+            </a>
+            <a
+              href="https://github.com/Meva1997/medidash-frontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+              style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
+            >
+              Frontend code
             </a>
             <a
               href="https://github.com/Meva1997/medidash-backend"
@@ -769,8 +779,66 @@ export default function Home() {
               className="btn-outline"
               style={{ padding: ".6rem 1.5rem", fontSize: "13px" }}
             >
-              View backend code
+              Backend code
             </a>
+          </div>
+
+          {/* Screenshots */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              style={{
+                borderRadius: "var(--radius-md)",
+                overflow: "hidden",
+                border: "0.5px solid var(--border)",
+              }}
+            >
+              <Image
+                src="/patient-info-image.png"
+                alt="MediDash — patient info, consultations and prescriptions"
+                width={800}
+                height={540}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+              <div
+                style={{
+                  padding: "10px 14px",
+                  background: "var(--bg-base)",
+                  borderTop: "0.5px solid var(--border)",
+                  fontSize: "12px",
+                  color: "var(--text-muted)",
+                  letterSpacing: "0.4px",
+                }}
+              >
+                Patient info · consultations · prescriptions
+              </div>
+            </div>
+            <div
+              style={{
+                borderRadius: "var(--radius-md)",
+                overflow: "hidden",
+                border: "0.5px solid var(--border)",
+              }}
+            >
+              <Image
+                src="/drug-int-image.png"
+                alt="MediDash — drug interaction checker"
+                width={800}
+                height={540}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+              <div
+                style={{
+                  padding: "10px 14px",
+                  background: "var(--bg-base)",
+                  borderTop: "0.5px solid var(--border)",
+                  fontSize: "12px",
+                  color: "var(--text-muted)",
+                  letterSpacing: "0.4px",
+                }}
+              >
+                Drug interaction checker · severity alerts
+              </div>
+            </div>
           </div>
         </div>
       </section>
